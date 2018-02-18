@@ -1,0 +1,41 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MasterPage.master.vb" Inherits="HabitatReStoreWeb.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %>- Habitat ReStore</title>
+    <link rel="stylesheet" href="~/Styles/stylesheet.css" runat="server"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="container">
+        <div class="navigation">
+            <asp:ImageButton ID="imgbLogo" runat="server" CssClass="logo" ImageUrl="~/Images/restore_logo.jpg" />
+            
+            
+            <asp:Menu ID="mnuMain" runat="server" CssClass="menu" Orientation="Horizontal">
+                <DynamicHoverStyle CssClass="menuHover" />
+                <DynamicMenuItemStyle CssClass="menuItem" Font-Bold="True" />
+                <DynamicItemTemplate>
+                    <%# Eval("Text") %>
+                </DynamicItemTemplate>
+                <Items>
+                    <asp:MenuItem Text="Home" ToolTip="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Donate" ToolTip="Donate" Value="Donate"></asp:MenuItem>
+                    <asp:MenuItem Text="Shop" ToolTip="Shop" Value="Shop"></asp:MenuItem>
+                    <asp:MenuItem Text="Volunteer" ToolTip="Volunteer" Value="Volunteer"></asp:MenuItem>
+                    <asp:MenuItem Text="About" ToolTip="About" Value="About"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
