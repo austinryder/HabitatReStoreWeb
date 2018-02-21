@@ -1,12 +1,13 @@
 ﻿body {
-    margin: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+	background-color: #FFFFCC;
 }
 /*#container {
     height: 100%;
     background-color: gray;
 }*/
 .navigation {
-    background-color: black;
+    background-color: #329932;
     float: left;
     position: fixed;
     width: 100%;
@@ -18,7 +19,6 @@
     margin: 150px auto 0px auto; 
     float: left;
     min-height: 625px;
-    background-color: white;
 }
 .logo {
     margin: 0;
@@ -30,11 +30,12 @@
     float: left;
     margin-top: 50px;
     padding: 20px;
-    font-family: 'Arial Rounded MT';
     font-size: 20px;
+    width: 600px;
 }
 .menuItem {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1000px;
+    content: "|";
+    float: right;
+    color: white;
+    border-left: 5px;
 }

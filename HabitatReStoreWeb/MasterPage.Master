@@ -17,11 +17,6 @@
             
             
             <asp:Menu ID="mnuMain" runat="server" CssClass="menu" Orientation="Horizontal">
-                <DynamicHoverStyle CssClass="menuHover" />
-                <DynamicMenuItemStyle CssClass="menuItem" Font-Bold="True" />
-                <DynamicItemTemplate>
-                    <%# Eval("Text") %>
-                </DynamicItemTemplate>
                 <Items>
                     <asp:MenuItem Text="Home" ToolTip="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="Donate" ToolTip="Donate" Value="Donate"></asp:MenuItem>
@@ -29,6 +24,7 @@
                     <asp:MenuItem Text="Volunteer" ToolTip="Volunteer" Value="Volunteer"></asp:MenuItem>
                     <asp:MenuItem Text="About" ToolTip="About" Value="About"></asp:MenuItem>
                 </Items>
+                <StaticMenuItemStyle CssClass="menuItem" HorizontalPadding="20px" />
             </asp:Menu>
         </div>
         <div class="content">
