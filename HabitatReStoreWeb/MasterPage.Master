@@ -13,9 +13,9 @@
     <form id="form1" runat="server">
     <div id="container">
         <div class="navigation">
-            <asp:ImageButton ID="imgbLogo" runat="server" CssClass="logo" ImageUrl="~/Images/restore_logo.jpg" />
+            <asp:ImageButton ID="imgbLogo" runat="server" CssClass="logo" ImageUrl="~/Images/restore_logo.jpg" ToolTip="Habitat for Humanity ReStore" />
             
-            
+            <!--
             <asp:Menu ID="mnuMain" runat="server" CssClass="menu" Orientation="Horizontal">
                 <Items>
                     <asp:MenuItem Text="Home" ToolTip="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
@@ -26,6 +26,18 @@
                 </Items>
                 <StaticMenuItemStyle CssClass="menuItem" HorizontalPadding="20px" />
             </asp:Menu>
+            -->
+            
+            <nav id="navBar" class="clearfix ">
+                <ul>
+                    <li class="page_item page-item-6 current_page_item"><a href="Home.aspx">Home</a></li>
+                    <li class="page_item page-item-86"><a href="Donate.aspx">Donate</a></li>
+					<li class="page_item page-item-86"><a href="Volunteer.aspx">Volunteer</a></li>
+					<li class="page_item page-item-89"><a href="#">Shop</a></li>
+					<li class="page_item page-item-3353"><a href="#">About</a></li>
+                </ul>
+            </nav>
+            
         </div>
         <div class="content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
